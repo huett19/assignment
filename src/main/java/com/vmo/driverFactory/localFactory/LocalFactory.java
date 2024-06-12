@@ -2,7 +2,7 @@ package com.vmo.driverFactory.localFactory;
 
 import org.openqa.selenium.WebDriver;
 
-public class LocatorFactory {
+public class LocalFactory {
     private WebDriver driver;
 
     public WebDriver createDriver(String browser) {
