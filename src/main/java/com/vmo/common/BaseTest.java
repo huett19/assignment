@@ -19,9 +19,11 @@ public class BaseTest {
         driver.manage().window().maximize();
         return driver;
     }
-    public WebDriver getDriver(){
+
+    public WebDriver getDriver() {
         return this.driver;
     }
+
     public void cleanAllBrowsers() {
         String osName = System.getProperty("os.name");
         String driverName = driver.toString().toLowerCase();
@@ -57,16 +59,9 @@ public class BaseTest {
         }
 
     }
-private static void executeCommand(String cmd) throws InterruptedException, IOException{
+
+    private static void executeCommand(String cmd) throws InterruptedException, IOException {
         Process process = Runtime.getRuntime().exec(cmd);
         process.waitFor();
-}
-
-
-
-
-
-
-
-
+    }
 }
