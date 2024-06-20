@@ -21,6 +21,7 @@ public class ProductPageUI {
     public static final String BAR_NOTIFICATION = xpath("//div[@id='bar-notification']/p");
     public static final String LOADING_ICON = xpath("//div[@class='ajax-loading-block-window']");
     public static final String SHOPPING_CART_TAG = xpath("//span[text()='Shopping cart']");
+    public static final String CART_QTY = xpath("//span[@class='cart-qty']");
     public static final String TERM_OF_SERVICE = xpath("//input[@id='termsofservice']");
     public static final String CHECKOUT_BTN = xpath("//button[@id='checkout']");
     public static final String CHECKOUT_AS_GUEST_BTN = xpath("//input[@value='Checkout as Guest']");

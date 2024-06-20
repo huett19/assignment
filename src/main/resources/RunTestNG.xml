@@ -6,7 +6,7 @@
         <parameter name="browser" value="CHROME"></parameter>
         <parameter name="modeRun" value="local"></parameter>
         <classes>
-            <class name="com.vmo.demowebshop.features.LoginTest"/>
+            <class name="com.vmo.demowebshop.features.DemoWebShopTest"/>
         </classes>
     </test>
 </suite>

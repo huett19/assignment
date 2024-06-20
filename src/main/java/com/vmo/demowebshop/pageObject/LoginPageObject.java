@@ -4,6 +4,7 @@ import com.vmo.common.BasePage;
 import com.vmo.demowebshop.interfaces.LoginPageUI;
 import com.vmo.helper.Log;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
 public class LoginPageObject extends BasePage {
@@ -20,7 +21,7 @@ public class LoginPageObject extends BasePage {
     }
 
     public String getTitlePage() {
-        Log.allure("test");
+        Log.allure("Get Title Page");
         return driver.getTitle();
     }
 
@@ -29,17 +30,10 @@ public class LoginPageObject extends BasePage {
         clickToElement(driver, LoginPageUI.LOGIN_TAG);
     }
 
-    public void clickLoginBtn(){
+    public void clickLoginBtn() {
         Log.allure("Click login button");
-        clickToElement(driver,LoginPageUI.LOGIN_BTN);
+        clickToElement(driver, LoginPageUI.LOGIN_BTN);
     }
-
-
-
-
-
-
-
 
 
 }

@@ -51,6 +51,15 @@ public class BasePage {
         return driver.findElement(locatorBy);
     }
 
+    protected String getText(WebDriver driver, String locator) {
+        By locatorBy = getLocator(locator);
+        return driver.findElement(locatorBy).getText();
+    }
+
+    protected String getText(WebDriver driver, String locator, String... params) {
+        return getWebElement(driver, getDynamicLocator(locator, params)).getText();
+    }
+
     public void clickToElement(WebDriver driver, String locator) {
         getWebElement(driver, locator).click();
     }
@@ -105,6 +114,15 @@ public class BasePage {
     protected void waitForElementInvisible(WebDriver driver, String locator) {
         explicit = new WebDriverWait(driver, Duration.ofSeconds(longTimeOut));
         explicit.until(ExpectedConditions.visibilityOfElementLocated(getLocator(locator)));
+    }
+
+    public String getAttributeElement(WebDriver driver, String locator, String attributeName) {
+        return getWebElement(driver, locator).getAttribute(attributeName);
+    }
+
+    public String getAttributeElement(WebDriver driver, String locator, String attributeName, String... params) {
+        locator = getDynamicLocator(locator, params);
+        return getWebElement(driver, locator).getAttribute(attributeName);
     }
 
 }

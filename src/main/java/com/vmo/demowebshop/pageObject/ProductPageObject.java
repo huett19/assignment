@@ -10,14 +10,10 @@ import org.testng.Assert;
 
 public class ProductPageObject extends BasePage {
     private WebDriver driver;
+    private int iniCart;
 
     public ProductPageObject(WebDriver driver) {
         this.driver = driver;
-    }
-
-    public void openDemoWebShop() {
-        openUrl(driver, "https://demowebshop.tricentis.com/");
-        Assert.assertEquals(getTitlePage(), LoginPageUI.PAGE_TITLE);
     }
 
     public String getTitlePage() {
@@ -30,9 +26,18 @@ public class ProductPageObject extends BasePage {
     }
 
     public void clickAddToCart() {
+        iniCart = Integer.parseInt(getText(driver, ProductPageUI.CART_QTY)); // contain text > just get number
         clickToElement(driver, ProductPageUI.ADD_TO_CART_FIRST_ITEM);
         waitForElementInvisible(driver, ProductPageUI.LOADING_ICON);
-//        Assert.assertEquals(getText);
+    }
+
+    public void verifyNotiAndCartItem() {
+        int currentCartQty = Integer.parseInt(getText(driver, ProductPageUI.CART_QTY));
+        // la so
+        Assert.assertTrue(currentCartQty-1== iniCart);
+        // so sanh string
+        String a = "a", b = "b";
+        a.equals(b);
     }
 
     public void clickShoppingCart() {
@@ -73,9 +78,10 @@ public class ProductPageObject extends BasePage {
     }
 
 
-    public void removeItem(){
+    public void removeItem() {
         checkToDefaultCheckboxOrDefaultRadio(driver, ProductPageUI.REMOVE_ICON);
         clickToElement(driver, ProductPageUI.UPDATE_SHOPPING_CART_BTN);
     }
+
 }
 
