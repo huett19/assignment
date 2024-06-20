@@ -1,8 +1,11 @@
 package com.vmo.common;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class BasePage {
     private long shortTimeOut = GlobalConstants.SHORT_TIMEOUT;
@@ -39,6 +42,10 @@ public class BasePage {
         }
     }
 
+    public String getDynamicLocator(String locator, String... params) {
+        return String.format(locator, (Object[]) params);
+    }
+
     protected WebElement getWebElement(WebDriver driver, String locator) {
         By locatorBy = getLocator(locator);
         return driver.findElement(locatorBy);
@@ -46,6 +53,58 @@ public class BasePage {
 
     public void clickToElement(WebDriver driver, String locator) {
         getWebElement(driver, locator).click();
+    }
+
+    public void clickToElement(WebDriver driver, String locator, String... params) {
+        getWebElement(driver, getDynamicLocator(locator, params)).click();
+    }
+
+    protected void sendKeysToElement(WebDriver driver, String locator, String value) {
+        getWebElement(driver, locator).clear();
+        getWebElement(driver, locator).sendKeys(value);
+    }
+
+    protected void sendKeysToElement(WebDriver driver, String locator, String... params) {
+        locator = getDynamicLocator(locator, params);
+        getWebElement(driver, locator).clear();
+        getWebElement(driver, locator).sendKeys(params);
+    }
+
+    public boolean isElementSelected(WebDriver driver, String locator) {
+        return getWebElement(driver, locator).isSelected();
+    }
+
+    public boolean isElementSelected(WebDriver driver, String locator, String... params) {
+        locator = getDynamicLocator(locator, params);
+        return getWebElement(driver, locator).isSelected();
+    }
+
+    public void checkToDefaultCheckboxOrDefaultRadio(WebDriver driver, String locator) {
+
+        if (!isElementSelected(driver, locator)) {
+            clickToElement(driver, locator);
+        }
+    }
+
+    public void checkToDefaultCheckboxOrDefaultRadio(WebDriver driver, String locator, String... params) {
+        if (!isElementSelected(driver, locator, params)) {
+            clickToElement(driver, locator, params);
+        }
+    }
+
+    protected void waitForElementSelected(WebDriver driver, String locator) {
+        explicit = new WebDriverWait(driver, Duration.ofSeconds(longTimeOut));
+        explicit.until(ExpectedConditions.elementToBeSelected(getLocator(locator)));
+    }
+
+    protected void waitForElementClickable(WebDriver driver, String locator) {
+        explicit = new WebDriverWait(driver, Duration.ofSeconds(longTimeOut));
+        explicit.until(ExpectedConditions.elementToBeClickable(getLocator(locator)));
+    }
+
+    protected void waitForElementInvisible(WebDriver driver, String locator) {
+        explicit = new WebDriverWait(driver, Duration.ofSeconds(longTimeOut));
+        explicit.until(ExpectedConditions.visibilityOfElementLocated(getLocator(locator)));
     }
 
 }
