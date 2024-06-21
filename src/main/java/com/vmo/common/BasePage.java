@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class BasePage {
     private long shortTimeOut = GlobalConstants.SHORT_TIMEOUT;
@@ -54,6 +55,10 @@ public class BasePage {
     protected String getText(WebDriver driver, String locator) {
         By locatorBy = getLocator(locator);
         return driver.findElement(locatorBy).getText();
+    }
+
+    public String getCurrentUrl(WebDriver driver) {
+        return driver.getCurrentUrl();
     }
 
     protected String getText(WebDriver driver, String locator, String... params) {
@@ -123,6 +128,15 @@ public class BasePage {
     public String getAttributeElement(WebDriver driver, String locator, String attributeName, String... params) {
         locator = getDynamicLocator(locator, params);
         return getWebElement(driver, locator).getAttribute(attributeName);
+    }
+
+    protected List<WebElement> getListWebElements(WebDriver driver, String locator) {
+        return driver.findElements(getLocator(locator));
+    }
+
+    protected List<WebElement> getListWebElements(WebDriver driver, String locator, String... params) {
+        locator = getDynamicLocator(locator, params);
+        return driver.findElements(getLocator(getDynamicLocator(locator, params)));
     }
 
 }

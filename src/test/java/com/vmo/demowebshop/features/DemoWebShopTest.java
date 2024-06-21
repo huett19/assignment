@@ -32,7 +32,6 @@ public class DemoWebShopTest extends BaseTest {
         loginPageObject = new LoginPageObject(driver);
     }
 
-
     ExcelConfig excelConfig = new ExcelConfig("src/main/resources/data.xlsx");
 
     @DataProvider(name = "ExcelData")
@@ -48,40 +47,71 @@ public class DemoWebShopTest extends BaseTest {
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys(Password);
 
 
-
-
 //        loginPageObject.openDemoWebShop();
 //        loginPageObject.clickLoginTag();
     }
 
     @Test
-    public void TC02_Buy2BooksHighestRated(){
-
-    }
-    @Test
-    public void TC03_RemoveItemOutOfShoppingCart(){
+    public void TC02_Buy2BooksHighestRated() {
         loginPageObject.openDemoWebShop();
+        loginPageObject.verifyHomePageTitle();
+        productPageObject.clickBookTag();
+        productPageObject.verifyBookPage();
+        productPageObject.addToCart2Items();
+        //        productPageObject.verifyNotiAndCartItem();
+        productPageObject.hoverOnShoppingCart();
+    }
+
+    @Test
+    public void TC03_RemoveItemOutOfShoppingCart() {
+        loginPageObject.openDemoWebShop();
+        loginPageObject.verifyHomePageTitle();
         //Step2
 
         productPageObject.clickShoppingCart();
-        productPageObject.removeItem();
-
+        productPageObject.verifyShoppingCartPage();
+        productPageObject.removeAnyItem();
+        productPageObject.verifyCheckboxIsChecked();
+        productPageObject.updateShoppingCart();
     }
+
     @Test
     public void TC04_BuyItemSuccessfully() {
         loginPageObject.openDemoWebShop();
+        loginPageObject.verifyHomePageTitle();
         productPageObject.clickDigitalDownloads();
+        productPageObject.verifyDigitalDownloadPage();
         productPageObject.clickAddToCart();
-        productPageObject.verifyNotiAndCartItem();
+//        productPageObject.verifyNotiAndCartItem();
         productPageObject.clickShoppingCart();
+        productPageObject.verifyShoppingCartPage();
         productPageObject.clickTermOfService();
+        productPageObject.verifyTermOfServiceCheckBox();
         productPageObject.clickCheckoutBtn();
+        productPageObject.verifyCheckoutPage();
 
         productPageObject.checkOutAsGuest();
-        productPageObject.onePageCheckout();
+        productPageObject.verifyOnePageCheckoutPage();
+        productPageObject.billingAddress();
+
+        productPageObject.verifyShippingAddress();
+        productPageObject.shippingAddress();
+        productPageObject.verifyShippingMethod();
+        productPageObject.shippingMethod();
+        productPageObject.verifyPaymentMethod();
+        productPageObject.paymentMethod();
+        productPageObject.verifyPaymentInformation();
+        productPageObject.paymentInformation();
+        productPageObject.verifyConfirmOrder();
+        productPageObject.confirmOrder();
+
+        productPageObject.verifyCompletedCheckout();
+        productPageObject.orderCompleted();
+        loginPageObject.verifyHomePageTitle();
     }
+
     @AfterMethod(alwaysRun = true)
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
     }
 }

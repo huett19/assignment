@@ -17,7 +17,11 @@ public class LoginPageObject extends BasePage {
     public void openDemoWebShop() {
         Log.allure("Get to site: https://demowebshop.tricentis.com/");
         openUrl(driver, "https://demowebshop.tricentis.com/");
-        Assert.assertEquals(getTitlePage(), LoginPageUI.PAGE_TITLE);
+    }
+
+    public void verifyHomePageTitle() {
+        Log.allure("Verify Home Page Title");
+        Assert.assertEquals(getTitlePage(),LoginPageUI.PAGE_TITLE);
     }
 
     public String getTitlePage() {
