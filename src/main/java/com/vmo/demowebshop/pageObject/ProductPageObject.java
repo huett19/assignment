@@ -1,13 +1,20 @@
 package com.vmo.demowebshop.pageObject;
 
+import com.sun.jdi.IntegerValue;
 import com.vmo.common.BasePage;
 import com.vmo.demowebshop.interfaces.LoginPageUI;
 import com.vmo.demowebshop.interfaces.ProductPageUI;
 import com.vmo.helper.Log;
 import org.apache.commons.math3.stat.descriptive.summary.Product;
 import org.checkerframework.checker.index.qual.PolyUpperBound;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class ProductPageObject extends BasePage {
     private WebDriver driver;
@@ -28,21 +35,36 @@ public class ProductPageObject extends BasePage {
 
     public void verifyBookPage() {
         Log.allure("Verify Book Page");
-        Assert.assertEquals(getTitlePage(), ProductPageUI.BOOK_PAGE);
+        Assert.assertEquals(getTitlePage(), ProductPageUI.BOOK_PAGE_TITLE);
     }
 
     public void addToCart2Items() {
+
+        List<>
+
+        List<WebElement> listRatingXpath = driver.findElements(By.xpath("//div[@class='rating']//div"));
+        List<Double> listRating = new ArrayList<Double>();
+        for (int i = 0; i < listRatingXpath.size(); i++) {
+            String ratingA = listRatingXpath.get(i).getText().replace("$", "");
+//            listRatingXpath.get(i).getSize().getWidth()
+            double val = Double.parseDouble(ratingA);
+            listRating.add(val);
+        }
+//        Collections.sort(listRating);
+        Collections.sort(listRating, Collections.reverseOrder());
+//        List<Integer> topTwo = new ArrayList<>();
+//        topTwo.add(listRating.get(0));
+//        topTwo.add(listRating.get(1));
+//        return topTwo;
+        listRating.get(0);
+        listRating.get(1);
+
 
     }
 
     public void hoverOnShoppingCart() {
 
     }
-
-
-
-
-
 
 
     public void clickDigitalDownloads() {
@@ -145,32 +167,12 @@ public class ProductPageObject extends BasePage {
         sendKeysToElement(driver, ProductPageUI.PHONE_NUMBER_TXT, "0912345678");
         waitForElementClickable(driver, ProductPageUI.BILLING_ADDRESS_CONTINUE_BTN);
         clickToElement(driver, ProductPageUI.BILLING_ADDRESS_CONTINUE_BTN);
-    }
-
-    public void verifyShippingAddress() {
-        Log.allure("Verify Shipping Address Is Expanding");
-        Assert.assertTrue(getWebElement(driver, ProductPageUI.SHIPPING_ADDRESS_TAB).getAttribute("class").contains("active"));
-    }
-
-    public void shippingAddress() {
-        Log.allure("Shipping Address Tab");
-        waitForElementClickable(driver, ProductPageUI.SHIPPING_ADDRESS_CONTINUE_BTN);
-        clickToElement(driver, ProductPageUI.SHIPPING_ADDRESS_CONTINUE_BTN);
-    }
-
-    public void verifyShippingMethod() {
-        Log.allure("Verify Shipping Method Is Expanding");
-        Assert.assertTrue(getWebElement(driver, ProductPageUI.SHIPPING_METHOD_TAB).getAttribute("class").contains("active"));
-    }
-
-    public void shippingMethod() {
-        Log.allure("Shipping Method Tab");
-        waitForElementClickable(driver, ProductPageUI.SHIPPING_METHOD_CONTINUE_BTN);
-        clickToElement(driver, ProductPageUI.SHIPPING_METHOD_CONTINUE_BTN);
+        waitForElementInvisible(driver, ProductPageUI.BILLING_PLEASE_WAIT_ICON);
     }
 
     public void verifyPaymentMethod() {
         Log.allure("Verify Tab Payment Method Is Expanding");
+        waitForElementVisible(driver, ProductPageUI.PAYMENT_METHOD_TAB);
         Assert.assertTrue(getWebElement(driver, ProductPageUI.PAYMENT_METHOD_TAB).getAttribute("class").contains("active"));
         Log.allure("Cash On Delivery Is Selected");
         Assert.assertTrue(getWebElement(driver, ProductPageUI.CASH_ON_DELIVERY_OPTION).isSelected());

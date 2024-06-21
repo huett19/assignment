@@ -73,3 +73,129 @@
 [20-06-2024 23:17:22.119 INFO com.vmo.helper.Log] - Billing Address Tab
 [20-06-2024 23:17:23.027 INFO com.vmo.helper.Log] - Verify Shipping Address Is Expanding
 [20-06-2024 23:17:23.106 INFO com.vmo.helper.Log] - -------TC04_BuyItemSuccessfullyFAILURE test---------
+[21-06-2024 13:15:43.221 INFO com.vmo.helper.Log] - Get to site: https://demowebshop.tricentis.com/
+[21-06-2024 13:15:49.275 INFO com.vmo.helper.Log] - Verify Home Page Title
+[21-06-2024 13:15:49.276 INFO com.vmo.helper.Log] - Get Title Page
+[21-06-2024 13:15:49.396 INFO com.vmo.helper.Log] - Click Digital Downloads
+[21-06-2024 13:15:51.932 INFO com.vmo.helper.Log] - Verify Digital Downloads Page
+[21-06-2024 13:15:51.946 INFO com.vmo.helper.Log] - Click Add To Cart Any Item
+[21-06-2024 13:15:52.157 INFO com.vmo.helper.Log] - Click Shopping Cart
+[21-06-2024 13:15:52.941 INFO com.vmo.helper.Log] - Verify Shopping Cart Page
+[21-06-2024 13:15:52.948 INFO com.vmo.helper.Log] - Verify Sum Of Total Equal To Sub-Total
+[21-06-2024 13:15:53.014 INFO com.vmo.helper.Log] - Click Term Of Service
+[21-06-2024 13:15:53.145 INFO com.vmo.helper.Log] - Verify Term Of Service Is Checked
+[21-06-2024 13:15:53.163 INFO com.vmo.helper.Log] - Click Checkout Button
+[21-06-2024 13:15:54.825 INFO com.vmo.helper.Log] - Verify Checkout Page
+[21-06-2024 13:15:54.860 INFO com.vmo.helper.Log] - Click Check Out As Guest Button
+[21-06-2024 13:15:56.334 INFO com.vmo.helper.Log] - Verify One Page Checkout & Tab Billing Address Is Expanding
+[21-06-2024 13:15:56.395 INFO com.vmo.helper.Log] - Billing Address Tab
+[21-06-2024 13:15:57.301 INFO com.vmo.helper.Log] - Verify Shipping Address Is Expanding
+[21-06-2024 13:15:57.359 INFO com.vmo.helper.Log] - -------TC04_BuyItemSuccessfullyFAILURE test---------
+[21-06-2024 13:16:36.155 INFO com.vmo.helper.Log] - Get to site: https://demowebshop.tricentis.com/
+[21-06-2024 13:16:42.012 INFO com.vmo.helper.Log] - Verify Home Page Title
+[21-06-2024 13:16:42.014 INFO com.vmo.helper.Log] - Get Title Page
+[21-06-2024 13:16:42.073 INFO com.vmo.helper.Log] - Click Digital Downloads
+[21-06-2024 13:16:44.011 INFO com.vmo.helper.Log] - Verify Digital Downloads Page
+[21-06-2024 13:16:44.021 INFO com.vmo.helper.Log] - Click Add To Cart Any Item
+[21-06-2024 13:16:44.208 INFO com.vmo.helper.Log] - Click Shopping Cart
+[21-06-2024 13:16:45.733 INFO com.vmo.helper.Log] - Verify Shopping Cart Page
+[21-06-2024 13:16:45.749 INFO com.vmo.helper.Log] - Verify Sum Of Total Equal To Sub-Total
+[21-06-2024 13:16:45.824 INFO com.vmo.helper.Log] - Click Term Of Service
+[21-06-2024 13:16:45.977 INFO com.vmo.helper.Log] - Verify Term Of Service Is Checked
+[21-06-2024 13:16:45.999 INFO com.vmo.helper.Log] - Click Checkout Button
+[21-06-2024 13:16:47.664 INFO com.vmo.helper.Log] - Verify Checkout Page
+[21-06-2024 13:16:47.691 INFO com.vmo.helper.Log] - Click Check Out As Guest Button
+[21-06-2024 13:16:50.124 INFO com.vmo.helper.Log] - Verify One Page Checkout & Tab Billing Address Is Expanding
+[21-06-2024 13:16:50.166 INFO com.vmo.helper.Log] - Billing Address Tab
+[21-06-2024 13:16:51.428 INFO com.vmo.helper.Log] - Verify Shipping Address Is Expanding
+[21-06-2024 13:16:51.512 INFO com.vmo.helper.Log] - -------TC04_BuyItemSuccessfullyFAILURE test---------
+[21-06-2024 13:38:59.802 INFO com.vmo.helper.Log] - Get to site: https://demowebshop.tricentis.com/
+[21-06-2024 13:39:04.152 INFO com.vmo.helper.Log] - Verify Home Page Title
+[21-06-2024 13:39:04.153 INFO com.vmo.helper.Log] - Get Title Page
+[21-06-2024 13:39:04.186 INFO com.vmo.helper.Log] - Click Digital Downloads
+[21-06-2024 13:39:05.815 INFO com.vmo.helper.Log] - Verify Digital Downloads Page
+[21-06-2024 13:39:05.820 INFO com.vmo.helper.Log] - Click Add To Cart Any Item
+[21-06-2024 13:39:05.971 INFO com.vmo.helper.Log] - Click Shopping Cart
+[21-06-2024 13:39:07.129 INFO com.vmo.helper.Log] - Verify Shopping Cart Page
+[21-06-2024 13:39:07.150 INFO com.vmo.helper.Log] - Verify Sum Of Total Equal To Sub-Total
+[21-06-2024 13:39:07.258 INFO com.vmo.helper.Log] - Click Term Of Service
+[21-06-2024 13:39:07.407 INFO com.vmo.helper.Log] - Verify Term Of Service Is Checked
+[21-06-2024 13:39:07.422 INFO com.vmo.helper.Log] - Click Checkout Button
+[21-06-2024 13:39:08.495 INFO com.vmo.helper.Log] - Verify Checkout Page
+[21-06-2024 13:39:08.520 INFO com.vmo.helper.Log] - Click Check Out As Guest Button
+[21-06-2024 13:39:10.310 INFO com.vmo.helper.Log] - Verify One Page Checkout & Tab Billing Address Is Expanding
+[21-06-2024 13:39:10.359 INFO com.vmo.helper.Log] - Billing Address Tab
+[21-06-2024 13:39:11.413 INFO com.vmo.helper.Log] - Verify Tab Payment Method Is Expanding
+[21-06-2024 13:39:11.509 INFO com.vmo.helper.Log] - -------TC04_BuyItemSuccessfullyFAILURE test---------
+[21-06-2024 13:45:16.741 INFO com.vmo.helper.Log] - Get to site: https://demowebshop.tricentis.com/
+[21-06-2024 13:45:32.894 INFO com.vmo.helper.Log] - Verify Home Page Title
+[21-06-2024 13:45:32.897 INFO com.vmo.helper.Log] - Get Title Page
+[21-06-2024 13:45:32.939 INFO com.vmo.helper.Log] - Click Digital Downloads
+[21-06-2024 13:45:34.681 INFO com.vmo.helper.Log] - Verify Digital Downloads Page
+[21-06-2024 13:45:34.694 INFO com.vmo.helper.Log] - Click Add To Cart Any Item
+[21-06-2024 13:45:34.834 INFO com.vmo.helper.Log] - Click Shopping Cart
+[21-06-2024 13:45:36.093 INFO com.vmo.helper.Log] - Verify Shopping Cart Page
+[21-06-2024 13:45:36.110 INFO com.vmo.helper.Log] - Verify Sum Of Total Equal To Sub-Total
+[21-06-2024 13:45:36.213 INFO com.vmo.helper.Log] - Click Term Of Service
+[21-06-2024 13:45:36.346 INFO com.vmo.helper.Log] - Verify Term Of Service Is Checked
+[21-06-2024 13:45:36.361 INFO com.vmo.helper.Log] - Click Checkout Button
+[21-06-2024 13:45:37.328 INFO com.vmo.helper.Log] - Verify Checkout Page
+[21-06-2024 13:45:37.358 INFO com.vmo.helper.Log] - Click Check Out As Guest Button
+[21-06-2024 13:45:38.645 INFO com.vmo.helper.Log] - Verify One Page Checkout & Tab Billing Address Is Expanding
+[21-06-2024 13:45:38.686 INFO com.vmo.helper.Log] - Billing Address Tab
+[21-06-2024 13:45:39.568 INFO com.vmo.helper.Log] - Verify Tab Payment Method Is Expanding
+[21-06-2024 13:45:39.655 INFO com.vmo.helper.Log] - -------TC04_BuyItemSuccessfullyFAILURE test---------
+[21-06-2024 13:46:46.504 INFO com.vmo.helper.Log] - Get to site: https://demowebshop.tricentis.com/
+[21-06-2024 13:46:50.720 INFO com.vmo.helper.Log] - Verify Home Page Title
+[21-06-2024 13:46:50.721 INFO com.vmo.helper.Log] - Get Title Page
+[21-06-2024 13:46:50.755 INFO com.vmo.helper.Log] - Click Digital Downloads
+[21-06-2024 13:46:51.762 INFO com.vmo.helper.Log] - Verify Digital Downloads Page
+[21-06-2024 13:46:51.771 INFO com.vmo.helper.Log] - Click Add To Cart Any Item
+[21-06-2024 13:46:51.902 INFO com.vmo.helper.Log] - Click Shopping Cart
+[21-06-2024 13:46:52.818 INFO com.vmo.helper.Log] - Verify Shopping Cart Page
+[21-06-2024 13:46:52.831 INFO com.vmo.helper.Log] - Verify Sum Of Total Equal To Sub-Total
+[21-06-2024 13:46:52.895 INFO com.vmo.helper.Log] - Click Term Of Service
+[21-06-2024 13:46:53.035 INFO com.vmo.helper.Log] - Verify Term Of Service Is Checked
+[21-06-2024 13:46:53.050 INFO com.vmo.helper.Log] - Click Checkout Button
+[21-06-2024 13:46:54.005 INFO com.vmo.helper.Log] - Verify Checkout Page
+[21-06-2024 13:46:54.037 INFO com.vmo.helper.Log] - Click Check Out As Guest Button
+[21-06-2024 13:46:55.395 INFO com.vmo.helper.Log] - Verify One Page Checkout & Tab Billing Address Is Expanding
+[21-06-2024 13:46:55.435 INFO com.vmo.helper.Log] - Billing Address Tab
+[21-06-2024 13:46:56.380 INFO com.vmo.helper.Log] - Verify Tab Payment Method Is Expanding
+[21-06-2024 13:46:56.452 INFO com.vmo.helper.Log] - -------TC04_BuyItemSuccessfullyFAILURE test---------
+[21-06-2024 13:58:30.400 INFO com.vmo.helper.Log] - Get to site: https://demowebshop.tricentis.com/
+[21-06-2024 13:58:34.979 INFO com.vmo.helper.Log] - Verify Home Page Title
+[21-06-2024 13:58:34.981 INFO com.vmo.helper.Log] - Get Title Page
+[21-06-2024 13:58:35.012 INFO com.vmo.helper.Log] - Click Digital Downloads
+[21-06-2024 13:58:36.241 INFO com.vmo.helper.Log] - Verify Digital Downloads Page
+[21-06-2024 13:58:36.254 INFO com.vmo.helper.Log] - Click Add To Cart Any Item
+[21-06-2024 13:58:36.403 INFO com.vmo.helper.Log] - Click Shopping Cart
+[21-06-2024 13:58:37.207 INFO com.vmo.helper.Log] - Verify Shopping Cart Page
+[21-06-2024 13:58:37.218 INFO com.vmo.helper.Log] - Verify Sum Of Total Equal To Sub-Total
+[21-06-2024 13:58:37.280 INFO com.vmo.helper.Log] - Click Term Of Service
+[21-06-2024 13:58:37.396 INFO com.vmo.helper.Log] - Verify Term Of Service Is Checked
+[21-06-2024 13:58:37.415 INFO com.vmo.helper.Log] - Click Checkout Button
+[21-06-2024 13:58:38.360 INFO com.vmo.helper.Log] - Verify Checkout Page
+[21-06-2024 13:58:38.399 INFO com.vmo.helper.Log] - Click Check Out As Guest Button
+[21-06-2024 13:58:39.745 INFO com.vmo.helper.Log] - Verify One Page Checkout & Tab Billing Address Is Expanding
+[21-06-2024 13:58:39.807 INFO com.vmo.helper.Log] - Billing Address Tab
+[21-06-2024 13:58:40.802 INFO com.vmo.helper.Log] - Verify Tab Payment Method Is Expanding
+[21-06-2024 13:58:40.865 INFO com.vmo.helper.Log] - -------TC04_BuyItemSuccessfullyFAILURE test---------
+[21-06-2024 14:02:56.684 INFO com.vmo.helper.Log] - Get to site: https://demowebshop.tricentis.com/
+[21-06-2024 14:03:01.290 INFO com.vmo.helper.Log] - Verify Home Page Title
+[21-06-2024 14:03:01.292 INFO com.vmo.helper.Log] - Get Title Page
+[21-06-2024 14:03:01.320 INFO com.vmo.helper.Log] - Click Digital Downloads
+[21-06-2024 14:03:05.535 INFO com.vmo.helper.Log] - Verify Digital Downloads Page
+[21-06-2024 14:03:05.552 INFO com.vmo.helper.Log] - Click Add To Cart Any Item
+[21-06-2024 14:03:05.683 INFO com.vmo.helper.Log] - Click Shopping Cart
+[21-06-2024 14:03:06.440 INFO com.vmo.helper.Log] - Verify Shopping Cart Page
+[21-06-2024 14:03:06.458 INFO com.vmo.helper.Log] - Verify Sum Of Total Equal To Sub-Total
+[21-06-2024 14:03:06.516 INFO com.vmo.helper.Log] - Click Term Of Service
+[21-06-2024 14:03:06.633 INFO com.vmo.helper.Log] - Verify Term Of Service Is Checked
+[21-06-2024 14:03:06.651 INFO com.vmo.helper.Log] - Click Checkout Button
+[21-06-2024 14:03:07.707 INFO com.vmo.helper.Log] - Verify Checkout Page
+[21-06-2024 14:03:07.738 INFO com.vmo.helper.Log] - Click Check Out As Guest Button
+[21-06-2024 14:03:10.731 INFO com.vmo.helper.Log] - Verify One Page Checkout & Tab Billing Address Is Expanding
+[21-06-2024 14:03:10.778 INFO com.vmo.helper.Log] - Billing Address Tab
+[21-06-2024 14:03:11.685 INFO com.vmo.helper.Log] - Verify Tab Payment Method Is Expanding
+[21-06-2024 14:03:11.773 INFO com.vmo.helper.Log] - -------TC04_BuyItemSuccessfullyFAILURE test---------

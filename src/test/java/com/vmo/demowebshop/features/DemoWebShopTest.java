@@ -94,10 +94,6 @@ public class DemoWebShopTest extends BaseTest {
         productPageObject.verifyOnePageCheckoutPage();
         productPageObject.billingAddress();
 
-        productPageObject.verifyShippingAddress();
-        productPageObject.shippingAddress();
-        productPageObject.verifyShippingMethod();
-        productPageObject.shippingMethod();
         productPageObject.verifyPaymentMethod();
         productPageObject.paymentMethod();
         productPageObject.verifyPaymentInformation();

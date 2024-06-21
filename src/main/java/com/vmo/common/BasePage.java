@@ -121,6 +121,16 @@ public class BasePage {
         explicit.until(ExpectedConditions.visibilityOfElementLocated(getLocator(locator)));
     }
 
+    public void waitForElementVisible(WebDriver driver, String locator) {
+        explicit = new WebDriverWait(driver, Duration.ofSeconds(longTimeOut));
+        explicit.until(ExpectedConditions.visibilityOfElementLocated(getLocator(locator)));
+    }
+
+    public void waitForElementVisible(WebDriver driver, String locator, String... params) {
+        explicit = new WebDriverWait(driver, Duration.ofSeconds(longTimeOut));
+        explicit.until(ExpectedConditions.visibilityOfElementLocated(getLocator(getDynamicLocator(locator, params))));
+    }
+
     public String getAttributeElement(WebDriver driver, String locator, String attributeName) {
         return getWebElement(driver, locator).getAttribute(attributeName);
     }
@@ -138,5 +148,7 @@ public class BasePage {
         locator = getDynamicLocator(locator, params);
         return driver.findElements(getLocator(getDynamicLocator(locator, params)));
     }
+
+
 
 }
