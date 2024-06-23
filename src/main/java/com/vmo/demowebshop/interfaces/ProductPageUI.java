@@ -54,7 +54,7 @@ public class ProductPageUI {
     public static final String BILLING_ADDRESS_CONTINUE_BTN = xpath("//div[@id='checkout-step-billing']//input[@title='Continue']");
     public static final String STATES_LOADING_PROGRESS_ICON = xpath("//span[@id='states-loading-progress']");
     public static final String BILLING_PLEASE_WAIT_ICON = xpath("//span[@id='billing-please-wait']");
-    public static final String PAYMENT_PLEASE_WAIT_ICON = xpath("//span[@id='payment-method-please-wait']");
+    public static final String PAYMENT_PLEASE_WAIT_ICON = xpath("//div[@id='payment-method-buttons-container']//span[@id='payment-method-please-wait']");
     public static final String PAYMENT_INFO_PLEASE_WAIT_ICON = xpath("//span[@id='payment-info-please-wait']");
     public static final String CONFIRM_ORDER_PLEASE_WAIT_ICON = xpath("//span[@id='confirm-order-please-wait']");
     public static final String PAYMENT_METHOD_TAB = xpath("//li[@id='opc-payment_method']");
