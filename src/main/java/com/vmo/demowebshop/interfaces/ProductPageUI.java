@@ -13,10 +13,6 @@ public class ProductPageUI {
 
 
     //TC03
-//    (//div[contains(@class,'home-page-product-grid')]//div[@class='product-item'])[2]
-//    (//div[contains(@class,'home-page-product-grid')]//div[@class='product-item'])[3]
-//    (//div[contains(@class,'home-page-product-grid')]//div[@class='product-item'])[5]
-
     public static final String ADD_TO_CART_BTN = xpath("//div[@class='add-to-cart']//input[contains(@class,'add-to-cart-button')]");
     public static final String REMOVE_ICON = xpath("//td[@class='remove-from-cart'])[1]");
     public static final String REMOVE_FIRST_ITEM = xpath("(//input[@name='removefromcart'])[1]");
