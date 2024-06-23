@@ -18,6 +18,8 @@ public class BasePage {
     private JavascriptExecutor jsExecutor;
     private WebDriver driver;
 
+    private WebElement addToCartButton;
+
     public WebDriver getDriver() {
         return driver;
     }
@@ -149,6 +151,9 @@ public class BasePage {
         return driver.findElements(getLocator(getDynamicLocator(locator, params)));
     }
 
+    public WebElement getAddToCartButton() {
+        return addToCartButton;
+    }
 
 
 }

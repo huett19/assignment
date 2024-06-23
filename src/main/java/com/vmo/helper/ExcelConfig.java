@@ -1,6 +1,5 @@
 package com.vmo.helper;
 
-import org.apache.poi.ss.usermodel.DataFormat;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -15,27 +14,27 @@ public class ExcelConfig {
     private FileInputStream fileIn;
     private FileOutputStream fileOut;
 
-    public ExcelConfig(String excelPath) {
-        try {
-            File file = new File(excelPath);
-            fileIn = new FileInputStream(file);
-            wb = new XSSFWorkbook(fileIn);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
     public ExcelConfig() {
         try {
             File file = new File("");
             fileIn = new FileInputStream(file);
             wb = new XSSFWorkbook(fileIn);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            throw new RuntimeException(e);
         }
     }
 
-    public int getNumRow() {
+    public ExcelConfig(String path) {
+        try {
+            File file = new File(path);
+            fileIn = new FileInputStream(file);
+            wb = new XSSFWorkbook(fileIn);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public int getRowNum() {
         sh = wb.getSheet("Sheet1");
         return sh.getLastRowNum();
     }
@@ -55,15 +54,15 @@ public class ExcelConfig {
         }
     }
 
-    public Object[][] data(){
-        int rowNum = getNumRow();
+    public Object[][] data() {
+        int rowNum = getRowNum();
         int colNum = getColNum();
         System.out.println("Row num: " + rowNum);
         System.out.println("Col num: " + colNum);
         Object[][] obj = new Object[rowNum][colNum];
         int currentRow = 0;
-        for(int i = 1; i<= rowNum; i++){
-            for(int j = 0; j < colNum; j++){
+        for (int i = 1; i <= rowNum; i++) {
+            for (int j = 0; j < colNum; j++) {
                 obj[currentRow][j] = getDataValue(i, j);
             }
             currentRow++;

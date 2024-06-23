@@ -40,15 +40,16 @@ public class DemoWebShopTest extends BaseTest {
     }
 
     @Test(dataProvider = "ExcelData")
-    public void TC01_LoginTest(String Username, String Password) {
-        driver = new ChromeDriver();
-        driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.xpath("//input[@id='user-name']")).sendKeys(Username);
-        driver.findElement(By.xpath("//input[@id='password']")).sendKeys(Password);
-
-
-//        loginPageObject.openDemoWebShop();
-//        loginPageObject.clickLoginTag();
+    public void TC01_LoginTest(String Username, String Password, String Message) {
+        loginPageObject.openDemoWebShop();
+        loginPageObject.verifyHomePageTitle();
+        loginPageObject.clickLoginTag();
+        loginPageObject.verifyLoginPageTitle();
+        loginPageObject.setEmail(Username);
+        loginPageObject.setPassword(Password);
+        loginPageObject.clickLogin();
+        String actualMessage = loginPageObject.getLoginSuccessMessage();
+        loginPageObject.verifyAfterLogin(Message);
     }
 
     @Test
@@ -58,7 +59,7 @@ public class DemoWebShopTest extends BaseTest {
         productPageObject.clickBookTag();
         productPageObject.verifyBookPage();
         productPageObject.addToCart2Items();
-        //        productPageObject.verifyNotiAndCartItem();
+        productPageObject.verifyNotiAndCartItem();
         productPageObject.hoverOnShoppingCart();
     }
 
@@ -67,12 +68,16 @@ public class DemoWebShopTest extends BaseTest {
         loginPageObject.openDemoWebShop();
         loginPageObject.verifyHomePageTitle();
         //Step2
+        productPageObject.addToCart3Products();
+        productPageObject.addToCartFromDetailPage();
+        productPageObject.verifyAfterAddToCart3Products();
 
         productPageObject.clickShoppingCart();
         productPageObject.verifyShoppingCartPage();
         productPageObject.removeAnyItem();
         productPageObject.verifyCheckboxIsChecked();
-        productPageObject.updateShoppingCart();
+        productPageObject.clickUpdateShoppingCart();
+        productPageObject.verifyAfterUpdateShoppingCart();
     }
 
     @Test
@@ -82,7 +87,7 @@ public class DemoWebShopTest extends BaseTest {
         productPageObject.clickDigitalDownloads();
         productPageObject.verifyDigitalDownloadPage();
         productPageObject.clickAddToCart();
-//        productPageObject.verifyNotiAndCartItem();
+        productPageObject.verifyNotiAndCartItem();
         productPageObject.clickShoppingCart();
         productPageObject.verifyShoppingCartPage();
         productPageObject.clickTermOfService();
@@ -91,7 +96,7 @@ public class DemoWebShopTest extends BaseTest {
         productPageObject.verifyCheckoutPage();
 
         productPageObject.checkOutAsGuest();
-        productPageObject.verifyOnePageCheckoutPage();
+        productPageObject.verifyBillingAddress();
         productPageObject.billingAddress();
 
         productPageObject.verifyPaymentMethod();
